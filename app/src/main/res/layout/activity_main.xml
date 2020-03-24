@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/studentNoET"
+        android:hint="Enter Student Number"
+        android:maxLength="30" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/studentNameET"
+        android:layout_below="@id/studentNoET"
+        android:hint="Enter Student Name"
+        android:maxLength="30" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/studentRollET"
+        android:layout_below="@id/studentNameET"
+        android:hint="Enter Student Roll No"
+        android:maxLength="30" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Data"
+        android:id="@+id/addBtn"
+        android:onClick="addValueToFirebase"
+        android:layout_below="@id/studentRollET"
+        tools:ignore="OnClick" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Data"
+        android:id="@+id/getBtn"
+        android:onClick="getDataFromFirebase"
+        android:layout_below="@+id/addBtn"
+        tools:ignore="OnClick" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/valueTV"
+        android:layout_below="@id/getBtn"
+        android:textSize="20sp" />
+
+
+
+
+</RelativeLayout>
